@@ -36,7 +36,8 @@ files](https://github.com/banach-space/llvm-tutor/blob/master/inputs).
 * [Overview of the Passes](#overview-of-the-passes)
 * [Debugging](#debugging)
 * [About Pass Managers in LLVM](#about-pass-managers-in-llvm)
-* [Credits & References](#credits)
+* [Acknowledgments & References](#acknowledgments)
+* [References](#references)
 * [License](#license)
 
 
@@ -667,8 +668,8 @@ These differences stem from the fact that in the case of Legacy Pass Manager you
 register a new command line option for **opt**, whereas  New Pass Manager
 simply requires you to define a pass pipeline (with `-passes=`).
 
-Credits
-========
+Acknowledgments
+===============
 This is first and foremost a community effort. This project wouldn't be
 possible without the amazing LLVM [online
 documentation](http://llvm.org/docs/), the plethora of great comments in the
@@ -702,14 +703,15 @@ I have learnt a great deal from it, thank you! I always look-up to those of us
 brave and bright enough to work in academia - thank you for driving the
 education and research forward!
 
-## References
+References
+==========
 Below is a list of LLVM resources available outside the official online
 documentation that I have found very helpful. Where possible, the items are sorted by
 date.
 
 * **LLVM IR**
-  *  _”LLVM IR Tutorial-Phis,GEPs and other things, ohmy!”_, V.Bridgers, F.
-Piovezan, EuroLLVM, ([slides](https://llvm.org/devmtg/2019-04/slides/Tutorial-Bridgers-LLVM_IR_tutorial.pdf),
+  *  _”LLVM IR Tutorial-Phis,GEPs and other things, oh my!”_, V.Bridgers, F.
+Piovezan, EuroLLVM 2019, ([slides](https://llvm.org/devmtg/2019-04/slides/Tutorial-Bridgers-LLVM_IR_tutorial.pdf),
   [video](https://www.youtube.com/watch?v=m8G_S5LwlTo&feature=youtu.be))
   * _"Mapping High Level Constructs to LLVM IR"_, M. Rodler ([link](https://mapping-high-level-constructs-to-llvm-ir.readthedocs.io/en/latest/))
 * **Legacy vs New Pass Manager**
@@ -718,20 +720,12 @@ Piovezan, EuroLLVM, ([slides](https://llvm.org/devmtg/2019-04/slides/Tutorial-Br
      [video](https://www.youtube.com/watch?v=6X12D46sRFw))
   * _"The LLVM Pass Manager Part 2"_, Ch. Carruth, LLVM Dev Meeting 2014
     ([slides](https://llvm.org/devmtg/2014-10/Slides/Carruth-TheLLVMPassManagerPart2.pdf),
-     [video](http://web.archive.org/web/20160718071630/http://llvm.org/devmtg/2014-10/Videos/The%20LLVM%20Pass%20Manager%20Part%202-720.mov))a
+     [video](http://web.archive.org/web/20160718071630/http://llvm.org/devmtg/2014-10/Videos/The%20LLVM%20Pass%20Manager%20Part%202-720.mov))
   * _”Passes in LLVM, Part 1”_, Ch. Carruth, EuroLLVM 2014 ([slides](https://llvm.org/devmtg/2014-04/PDFs/Talks/Passes.pdf), [video](https://www.youtube.com/watch?v=rY02LT08-J8))
 * **Examples in LLVM**
-  * Examples in LLVM source tree in
-    [llvm/examples/IRTransforms/](https://github.com/llvm/llvm-project/tree/bf142fc43347d8a35a71f46f7dda7e2a0a992e0d/llvm/examples/IRTransforms).
-    This was recently added in the following commit:
-
-```
-commit 7d0b1d77b3d4d47df477519fd1bf099b3df6f899
-Author: Florian Hahn <flo@fhahn.com>
-Date:   Tue Nov 12 14:06:12 2019 +0000
-
-[Examples] Add IRTransformations directory to examples.
-```
+	* The Hello example: [llvm/lib/Transforms/Hello](https://github.com/llvm/llvm-project/tree/release/10.x/llvm/lib/Transforms/Hello)
+	* The Bye example: [llvm/examples/Bye](https://github.com/llvm/llvm-project/tree/release/10.x/llvm/examples/Bye)
+	* Control flow graph (CFG) simplifications (presented in [this tutorial](https://www.youtube.com/watch?v=3QQuhL-dSys&t=826s)): [llvm/examples/IRTransforms/](https://github.com/llvm/llvm-project/tree/release/10.x/llvm/examples/IRTransforms)
 * **LLVM Pass Development**
   * _"Getting Started With LLVM: Basics "_, J. Paquette, F. Hahn, LLVM Dev Meeting 2019 [video](https://www.youtube.com/watch?v=3QQuhL-dSys&t=826s)
   * _"Writing an LLVM Pass: 101"_, A. Warzyński, LLVM Dev Meeting 2019 [video](https://www.youtube.com/watch?v=ar7cJl2aBuU)
